@@ -16,7 +16,7 @@ public class BoardController {
     //@Autowired
     private final BoardService boardService;
 
-    @PostMapping("/board")
+    @PostMapping("/api/board")
     public ResponseEntity<?> board(@RequestBody BoardRequestDto boardRequestDto) {
         /*
         * @RequestBody : 이걸 안 쓰면 form-data 형식으로 보내야 한다.
