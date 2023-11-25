@@ -4,6 +4,5 @@ import lombok.Data;
 
 @Data
 public class BoardRequestDto {
-    private String name;
     private String contents;
 }

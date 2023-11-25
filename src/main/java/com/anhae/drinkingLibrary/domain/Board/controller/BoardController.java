@@ -2,6 +2,7 @@ package com.anhae.drinkingLibrary.domain.Board.controller;
 
 import com.anhae.drinkingLibrary.domain.Board.repository.dto.BoardRequestDto;
 import com.anhae.drinkingLibrary.domain.Board.service.BoardService;
+import com.anhae.drinkingLibrary.domain.User.User;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -22,7 +23,10 @@ public class BoardController {
         * @RequestBody : 이걸 안 쓰면 form-data 형식으로 보내야 한다.
         *                이걸 쓰면 json으로 보내고 받을 수 있다.
         * */
-        this.boardService.글쓰기2(boardRequestDto);
+
+        User user = new User();
+
+        this.boardService.글쓰기2(user, boardRequestDto);
         return new ResponseEntity<String>("ok", HttpStatus.OK);
     }
 }

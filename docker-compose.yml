@@ -5,7 +5,7 @@ services:
     image: openjdk:17-alpine
     volumes:
       - ./build/libs:/app
-    command: sh -c "java -jar /app/drinkingLibrary-0.0.1-SNAPSHOT.jar"
+    command: sh -c "java -jar /app/stst.jar"
 
   nginx:
     build:
